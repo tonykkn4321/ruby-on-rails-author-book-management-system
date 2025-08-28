@@ -49,3 +49,8 @@ rails generate controller Books
 
 # Run the Server:
 rails server
+
+
+# For Railway:
+gem install bundler -v 2.7.1
+bundle lock --add-platform x86_64-linux
