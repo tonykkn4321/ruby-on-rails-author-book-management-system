@@ -1,26 +1,41 @@
 # Project structure:
-author_book_management_system/
+ruby-on-rails-author-book-management-system/
 ├── app/
 │   ├── controllers/
+│   │   ├── authors_controller.rb
+│   │   └── books_controller.rb
 │   ├── models/
-│   └── views/
+│   │   ├── author.rb
+│   │   └── book.rb
+│   ├── views/
+│   └── serializers/
 ├── config/
 │   ├── database.yml
-│   └── routes.rb
+│   ├── routes.rb
+│   └── initializers/
+│       └── cors.rb
 ├── db/
 │   ├── migrate/
 │   └── seeds.rb
-└── Gemfile
+├── Gemfile
+└── Rakefile
 
 # Create the Rails App
 rails new author_book_management_system --database=mysql
 cd author_book_management_system
 
 # Add mysql2 and pg gems to your Gemfile:
-gem 'mysql2'
-gem 'pg'
+gem 'mysql2', '0.5.6'  # Adjust as necessary
+gem 'pg', '>= 1.2'  # For production on Railway
+gem 'rack-cors', require: 'rack/cors'  # For CORS support
 
-# Run 
+
+# To install depedencies:
+bundle install
+
+# To connect to my localhost mysql
+gem uninstall mysql2
+gem install mysql2 -v '0.5.6' -- --with-mysql-config="C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql_config"
 bundle install
 
 # Generate Models:
