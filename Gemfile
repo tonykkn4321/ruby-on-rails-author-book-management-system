@@ -38,7 +38,6 @@ gem "kamal", require: false
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
-gem 'mysql2', '>= 0.5'
 gem 'pg', '>= 1.2'  # For production on Railway
 gem 'rack-cors', require: 'rack/cors'  # For CORS support
 
