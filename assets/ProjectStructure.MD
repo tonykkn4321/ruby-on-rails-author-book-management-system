@@ -25,7 +25,8 @@ rails new author_book_management_system --database=mysql
 cd author_book_management_system
 
 # Add mysql2 and pg gems to your Gemfile:
-gem 'mysql2', '0.5.6'  # Adjust as necessary
+ruby '3.4.5'
+gem 'rack', '~> 3.2'
 gem 'pg', '>= 1.2'  # For production on Railway
 gem 'rack-cors', require: 'rack/cors'  # For CORS support
 
@@ -50,7 +51,6 @@ rails generate controller Books
 # Run the Server:
 rails server
 
-
 # For Railway:
 gem install bundler -v 2.7.1
 bundle lock --add-platform x86_64-linux
@@ -58,3 +58,8 @@ bundle lock --add-platform x86_64-linux
 # Generate a secure key:
 rails secret
 f7eef5e4be282f9ff507e179159191eb4e76c34d209759744e066d2a8de93c879cd352a7a953e868433c0d5c63b99bbebefdbae6cb2b83373b8a49d0c7f70c3f
+
+# Custom start command:
+bash -c 'bundle exec rails server -b 0.0.0.0 -p $PORT'
+
+
