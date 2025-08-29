@@ -62,4 +62,6 @@ f7eef5e4be282f9ff507e179159191eb4e76c34d209759744e066d2a8de93c879cd352a7a953e868
 # Custom start command:
 bash -c 'bundle exec rails server -b 0.0.0.0 -p $PORT'
 
+Remane config.ru to cofig.ru.bak
+
 
