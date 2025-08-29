@@ -54,3 +54,7 @@ rails server
 # For Railway:
 gem install bundler -v 2.7.1
 bundle lock --add-platform x86_64-linux
+
+# Generate a secure key:
+rails secret
+f7eef5e4be282f9ff507e179159191eb4e76c34d209759744e066d2a8de93c879cd352a7a953e868433c0d5c63b99bbebefdbae6cb2b83373b8a49d0c7f70c3f
